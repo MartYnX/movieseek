@@ -19,7 +19,9 @@ const Watchlist: React.FC<WatchlistProps> = ({ movies, onRemove }) => {
                         title={movie.title} 
                         posterPath={movie.poster_path} 
                         overview={movie.overview} 
-                        onRemove={() => onRemove(movie)} // Passer la fonction de suppression
+                        onRemove={() => onRemove(movie)}
+                        onSave={() => {/*for later*/}}
+                        onDelete={() => {/*for later*/}}
                     />
                 ))
             )}

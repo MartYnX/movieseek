@@ -6,7 +6,8 @@ interface MovieCardProps {
     posterPath: string;
     overview: string;
     onRemove: () => void;
-    onSave: () => void;
+    onSave?: () => void;
+    onDelete?: () => void;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ title, posterPath, overview, onRemove, onSave }) => {
