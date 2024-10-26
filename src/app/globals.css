@@ -1,0 +1,220 @@
+:root {
+  --input-height: 40px;
+  --button-height: 40px;
+  --suggestion-height: 200px;
+  --font-size: 16px;
+  --primary-color: #e74c3c;
+  --button-color: #0070f3;
+  --background-color: #2c3e50;
+  --item-background: #34495e;
+  --text-color: #ecf0f1;
+  --suggestion-text-color: #333;
+  --size: 700px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+#add-movie {
+  margin-bottom: 20px;
+  width: var(--size); /* Largeur uniforme */
+}
+
+#movie-title {
+  padding: 10px;
+  font-size: var(--font-size);
+  height: var(--input-height);
+  width: 100%; /* Utilise la largeur du parent */
+  box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+
+button {
+  font-size: var(--font-size);
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: var(--button-height);
+  width: 100%; /* Largeur du parent */
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+#movie-list {
+  list-style-type: none;
+  padding: 0;
+  width: var(--size); /* Largeur uniforme */
+}
+
+.movie-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--item-background);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  width: 100%; /* Largeur du parent */
+  box-sizing: border-box;
+}
+
+.movie-item img {
+  width: 50px;
+  height: 75px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  width: var(--size); /* Largeur uniforme */
+}
+
+.addMovie {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%; /* Largeur du parent */
+}
+
+.addMovie input {
+  flex: 1;
+  font-size: var(--font-size);
+  margin-bottom: 5px;
+  width: 100%; /* Largeur du parent */
+  border: none;
+  box-sizing: border-box;
+}
+
+.addMovie button {
+  background-color: var(--button-color);
+  color: white;
+  font-size: var(--font-size);
+  border: none;
+  cursor: pointer;
+  height: var(--button-height);
+  width: 100%; /* Largeur du parent */
+  box-sizing: border-box;
+}
+
+.movieList {
+  list-style: none;
+  padding: 0;
+  width: var(--size); /* Largeur uniforme */
+}
+
+.movieCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Assure que l'image reste bien à droite */
+  background-color: var(--item-background);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  width: 100%; /* Largeur totale du conteneur */
+  box-sizing: border-box;
+}
+
+.movieCard div {
+  width: 65%; /* Largeur du conteneur de texte */
+}
+
+.movieCard img {
+  width: 30%; /* Largeur de l'image */
+  height: auto;
+  border-radius: 4px;
+  margin-left: 10px; /* Ajoute un espace entre le texte et l'image */
+}
+
+.movieCard h2 {
+  margin: 0;
+  font-size: 25px;
+  color: var(--primary-color); /* Couleur pour le titre */
+}
+
+.movieCard p {
+  font-size: 15px; /* Taille de police ajustée pour le texte descriptif */
+  line-height: 1.5; /* Améliore la lisibilité du texte */
+  color: var(--text-color);
+  text-align: justify; /* Justifie le texte pour un aspect plus formel */
+}
+
+.movieCard .buttonGroup {
+  display: flex;
+  gap: 10px; /* Espace entre les boutons */
+  margin-top: 10px;
+  width: 100%;
+}
+
+.movieCard button {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Bouton Save avec couleur verte */
+.movieCard button:first-child {
+  background-color: #28a745; /* Vert pour Save */
+}
+
+.movieCard button:first-child:hover {
+  background-color: #218838; /* Vert foncé au survol pour Save */
+}
+
+/* Bouton Remove avec couleur rouge */
+.movieCard button:last-child {
+  background-color: var(--primary-color); /* Rouge pour Remove */
+}
+
+.movieCard button:last-child:hover {
+  background-color: #c0392b;
+}
+
+
+/* Styles pour les suggestions */
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  max-height: var(--suggestion-height);
+  overflow-y: auto;
+  background-color: white;
+  width: 100%; /* Largeur du parent */
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  color: var(--suggestion-text-color);
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
