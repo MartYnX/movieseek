@@ -75,8 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         env:
-          API_KEY: ${{ env.API_KEY }}
-          run: echo "api key is ${{env.API_KEY}}"
+          API_KEY: ${{ secrets.API_KEY }}
+          run: echo "api key is ${{secrets.API_KEY}}"
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
