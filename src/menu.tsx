@@ -34,7 +34,7 @@ const Menu: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Squeak Watch-list</h1>
+      <h1>Watch-list</h1>
       <div className="addMovie">
         <input
           type="text"
