@@ -218,3 +218,56 @@ button:hover {
 .suggestions li:hover {
   background-color: #f0f0f0;
 }
+
+/* Écrans plus petits que 1200px (tablettes en mode paysage et petits écrans d'ordinateurs de bureau) */
+@media (max-width: 1200px) {
+  :root {
+    --size: 600px; /* Ajustement de la largeur pour les éléments */
+  }
+ .container, #add-movie, #movie-list,.movieList {
+    width: var(--size); /* Application de la nouvelle largeur */
+  }
+ .movieCard img {
+    width: 40%; /* Ajustement de la largeur de l'image pour plus d'espace */
+  }
+ .movieCard div {
+    width: 55%; /* Ajustement de la largeur du conteneur de texte */
+  }
+}
+
+/* Écrans plus petits que 768px (tablettes en mode portrait et grands smartphones) */
+@media (max-width: 768px) {
+  :root {
+    --size: 450px; /* Nouvelle largeur pour les éléments */
+  }
+ .container, #add-movie, #movie-list,.movieList {
+    width: var(--size); /* Mise à jour de la largeur */
+  }
+ .movieCard {
+    flex-direction: column; /* Passage en mode colonne pour plus de lisibilité */
+  }
+ .movieCard img {
+    width: 100%; /* Image en pleine largeur */
+    height: auto;
+    margin-bottom: 10px; /* Espace entre l'image et le texte */
+  }
+ .movieCard div {
+    width: 100%; /* Conteneur de texte en pleine largeur */
+  }
+}
+
+/* Écrans plus petits que 480px (petits smartphones) */
+@media (max-width: 480px) {
+  :root {
+    --size: 300px; /* Largeur minimale pour les éléments */
+  }
+ .container, #add-movie, #movie-list,.movieList {
+    width: var(--size); /* Dernière mise à jour de largeur */
+  }
+ .movieCard button {
+    padding: 5px; /* Réduction de l'espace de padding */
+  }
+ .suggestions {
+    max-height: 150px; /* Réduction de la hauteur des suggestions */
+  }
+}
