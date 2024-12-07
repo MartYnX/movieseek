@@ -4,11 +4,14 @@ import React, { useState, useEffect } from 'react';
 import Watchlist from './components/Watchlist';
 import { Movie as MovieType } from './types/Movie';
 import { fetchMovieInfo, fetchSuggestions } from './components/MovieUtils';
+import { useTranslations } from 'next-intl';
 
 const Menu: React.FC = () => {
   const [movies, setMovies] = useState<MovieType[]>([]);
   const [query, setQuery] = useState<string>('');
   const [suggestions, setSuggestions] = useState<MovieType[]>([]); // Nouvel état pour les suggestions
+
+  const t = useTranslations('Menu');
 
   async function addMovie() {
     if (query) {
@@ -34,7 +37,7 @@ const Menu: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Watch-list</h1>
+      <h1>{t('title')}</h1>
       <div className="addMovie">
         <input
           type="text"
